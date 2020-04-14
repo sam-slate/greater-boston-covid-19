@@ -234,6 +234,15 @@ towns = [
 		"infected_regex":"Confirmed COVID-19 Cases in Newton: ((?:\d|,)*)"
 	},
 	{
+		"town_name":"Peabody",
+		"population": "53,278",
+		"data_available":False,
+		"manually_find": False,
+		"url":"",
+		"infected_xpath":"", 
+		"infected_regex":""
+	},
+	{
 		"town_name":"Quincy",
 		"population": "94,580",
 		"data_available":True,
