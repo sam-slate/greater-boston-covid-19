@@ -5,6 +5,8 @@
 #
 #
 #	Notes:
+#		- This script requires a Chrome webdriver. You can download one here: https://chromedriver.chromium.org/downloads. 
+#			Make sure to update the executable path to where you place the webdriver.
 #		- Depending on a town website, COVID-19 case numbers may or may not be in a stable
 #		  location in the HTML file. For those that are, an XPATH can be used to locate
 #		  the element which contains the case numbers and regex can be used to pull the number
@@ -22,6 +24,7 @@ import time
 import json
 
 OUTPUT_FILE = "masscovid_results_04-10-20.json"
+WEBDRIVER_LOCATION = "chromedriver"
 
 towns = [
 	{
@@ -399,7 +402,7 @@ towns = [
 ]
 
 def get_num_cases(towns):
-	browser = webdriver.Chrome(executable_path="chromedriver")
+	browser = webdriver.Chrome(executable_path=WEBDRIVER_LOCATION)
 
 	results = []
 
